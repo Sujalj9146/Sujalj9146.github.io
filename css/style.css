@@ -4,38 +4,36 @@
 
 :root,
 :root[data-theme="dark"] {
-  /* graphite grey with a warm sand accent */
-  --bg: #161616;
-  --bg-alt: #1b1b1a;
-  --surface: #1f1f1e;
-  --surface-2: #262625;
-  --border: #2f2e2c;
-  --border-strong: #3d3b38;
-  --text: #f1ede6;
-  --muted: #aaa59c;
-  --dim: #78736b;
-  --accent: #e3c597;
-  --accent-ink: #1b1611;
-  --accent-soft: rgba(227, 197, 151, 0.1);
-  --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+  --bg: #0a0b0d;
+  --bg-alt: #0e1013;
+  --surface: #121418;
+  --surface-2: #181b20;
+  --border: #22252c;
+  --border-strong: #2e323a;
+  --text: #ecedef;
+  --muted: #a0a5ae;
+  --dim: #6c717b;
+  --accent: #5fe3b5;
+  --accent-ink: #062018;
+  --accent-soft: rgba(95, 227, 181, 0.1);
+  --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  /* beach sand with deep bronze */
-  --bg: #f5f1ea;
-  --bg-alt: #efe9df;
-  --surface: #fbf9f5;
-  --surface-2: #f3eee6;
-  --border: #e3dbcd;
-  --border-strong: #d3c8b6;
-  --text: #1d1a16;
-  --muted: #5e574d;
-  --dim: #8f8678;
-  --accent: #9c6b30;
+  --bg: #fafafa;
+  --bg-alt: #f3f4f5;
+  --surface: #ffffff;
+  --surface-2: #f6f7f8;
+  --border: #e5e7ea;
+  --border-strong: #d6d9de;
+  --text: #0f1114;
+  --muted: #555b64;
+  --dim: #868c96;
+  --accent: #0b9a6d;
   --accent-ink: #ffffff;
-  --accent-soft: rgba(156, 107, 48, 0.09);
-  --shadow: 0 24px 60px -24px rgba(60, 45, 25, 0.2);
+  --accent-soft: rgba(11, 154, 109, 0.08);
+  --shadow: 0 24px 60px -24px rgba(15, 17, 20, 0.18);
   color-scheme: light;
 }
 
@@ -161,10 +159,6 @@ button { font: inherit; color: inherit; }
 
 /* ---------- hero ---------- */
 .hero { padding: 72px 0 96px; position: relative; overflow: hidden; }
-.hero::before {
-  content: ""; position: absolute; inset: -20% -10% auto auto; width: 720px; height: 720px; pointer-events: none;
-  background: radial-gradient(closest-side, var(--accent-soft), transparent 70%);
-}
 .hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; position: relative; }
 
 .eyebrow {
@@ -191,23 +185,11 @@ button { font: inherit; color: inherit; }
 
 .hero__photo { justify-self: end; width: 100%; max-width: 440px; }
 .photo-frame { position: relative; aspect-ratio: 4 / 5; isolation: isolate; }
-/* soft accent glow and a faint ring behind the cutout */
-.photo-frame::before {
-  content: ""; position: absolute; z-index: -1; left: 8%; right: 8%; top: 10%; aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 68%);
-  filter: blur(8px);
-}
-.photo-frame::after {
-  content: ""; position: absolute; z-index: -1; left: 4%; right: 4%; top: 6%; aspect-ratio: 1;
-  border-radius: 50%; border: 1px solid var(--border-strong); opacity: .7;
-}
 .photo-frame picture, .photo-frame img { display: block; width: 100%; height: 100%; }
 .photo-frame img {
   object-fit: contain; object-position: center bottom;
   -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
           mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .35));
 }
 .hero__photo figcaption { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 18px; }
 
