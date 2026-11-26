@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sujal Jadhavar | Full-Stack Developer</title>
+  <meta name="description" content="Sujal Jadhavar, a computer science student in Pune building full-stack web applications with React, FastAPI and PostgreSQL, and AI features that solve real problems.">
+  <meta property="og:title" content="Sujal Jadhavar | Full-Stack Developer">
+  <meta property="og:description" content="Full-stack web applications with React, FastAPI and PostgreSQL, plus applied AI.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__row">
+    <a href="#top" class="logo" aria-label="Sujal Jadhavar, back to top">Sujal Jadhavar<span>.</span></a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#recognition">Recognition</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle light and dark theme">
+        <span class="only-dark"><i data-lucide="sun"></i></span><span class="only-light"><i data-lucide="moon"></i></span>
+      </button>
+      <a href="#contact" class="header__cta">Let's talk <i data-lucide="arrow-up-right"></i></a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <span class="chip reveal"><span class="pulse" aria-hidden="true"></span>Open to internships · Batch 2027</span>
+      <p class="eyebrow reveal">Hi there, I'm</p>
+      <h1 class="hero__name reveal">Sujal<br><span>Jadhavar.</span></h1>
+      <p class="hero__tagline reveal">Full-stack developer building web apps that put AI to real work.</p>
+      <p class="hero__intro reveal">
+        I design and build complete products: React interfaces, FastAPI services, PostgreSQL
+        databases, and AI features like retrieval-augmented assistants. I care about systems
+        that are secure, explainable and actually useful to the people using them.
+      </p>
+      <p class="hero__loc reveal"><i data-lucide="map-pin"></i> Pune, India</p>
+
+      <div class="hero__socials reveal">
+        <a class="soc" href="https://github.com/Sujalj9146" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+        <a class="soc" href="https://www.linkedin.com/in/sujal-jadhavar-671689287/" target="_blank" rel="noopener"><i data-lucide="linkedin"></i>LinkedIn</a>
+        <a class="soc" href="mailto:sujalj9146@gmail.com"><i data-lucide="mail"></i>sujalj9146@gmail.com</a>
+      </div>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="#work">See my work <i data-lucide="arrow-up-right"></i></a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <figure class="hero__photo reveal">
+      <div class="photo-frame" id="photoFrame">
+        <picture>
+          <source srcset="images/profile.webp" type="image/webp">
+          <img src="images/profile.png" alt="Sujal Jadhavar" width="800" height="1000" fetchpriority="high">
+        </picture>      </div>
+      <figcaption>
+        <span class="mono">SUJAL JADHAVAR · 2026</span>
+        <a class="btn btn--small" id="resumeBtn" href="resume.pdf" target="_blank" rel="noopener" hidden><i data-lucide="file-text"></i>Resume <i data-lucide="arrow-up-right"></i></a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <span class="label reveal">01 / About</span>
+    <h2 class="title reveal">Who I am.</h2>
+
+    <div class="about">
+      <div class="stats reveal">
+        <div class="stat"><b>8.64</b><span>CGPA, B.Tech CSE</span></div>
+        <div class="stat"><b>6</b><span>Projects built</span></div>
+        <div class="stat"><b>2</b><span>Research internships</span></div>
+        <div class="stat"><b>1st</b><span>MIT-ADT AI Grand Challenge '26</span></div>
+      </div>
+
+      <div class="about__text reveal">
+        <p class="about__lead">I'm a final-year Computer Science student who likes building things end to end, from the interface people click on down to the database it reads from.</p>
+        <p>I'm pursuing my B.Tech in Computer Science &amp; Engineering at MIT School of Computing, MIT ADT University, Pune.</p>
+        <p>Most of my recent work is backend-heavy: designing schemas, building REST APIs with FastAPI, and handling authentication and role-based access. I've also spent a lot of time with machine learning, so when a product needs to understand data instead of just storing it, I can build that part too.</p>
+        <p>Outside of coursework I'm President of the IEEE EMBS Student Chapter at my university, where I organise workshops, seminars and hackathons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section section--alt" id="work">
+  <div class="container">
+    <span class="label reveal">02 / Selected work</span>
+    <h2 class="title reveal">Projects I've built.</h2>
+    <p class="subtitle reveal">Web platforms, applied AI and a bit of hardware. Open any card for the full technical breakdown.</p>
+
+    <div class="projects" id="projects"><!-- rendered by js/main.js --></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="container">
+    <span class="label reveal">03 / Experience</span>
+    <h2 class="title reveal">Where I've worked.</h2>
+    <p class="subtitle reveal">Internships, research and leadership.</p>
+
+    <div class="xp">
+      <article class="xp__item reveal">
+        <div class="xp__meta">
+          <span class="xp__date"><i data-lucide="calendar"></i>Jun 2025 – Jul 2025</span>
+          <h3>Web Development Intern</h3>
+          <p class="xp__org">IEEE EMBS Pune Chapter</p>
+          <p class="xp__type">Internship · Pune</p>
+        </div>
+        <div class="xp__body">
+          <span class="tag tag--project"><b>Project</b> CogniFlex</span>
+          <p>Built CogniFlex, a gamified cognitive rehabilitation platform with interactive exercises for memory and attention.</p>
+          <ul>
+            <li>Implemented adaptive difficulty logic that adjusts exercises to each user's performance.</li>
+            <li>Built rehabilitation modules and the application workflows around them.</li>
+            <li>Worked on frontend–backend integration, testing and performance optimisation.</li>
+          </ul>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Python</span></div>
+        </div>
+      </article>
+
+      <article class="xp__item reveal">
+        <div class="xp__meta">
+          <span class="xp__date"><i data-lucide="calendar"></i>Apr 2025 – Sep 2025</span>
+          <h3>Research Intern</h3>
+          <p class="xp__org">IEEE Computer Society, Bangalore Chapter</p>
+          <p class="xp__type">Academics / Research</p>
+        </div>
+        <div class="xp__body">
+          <span class="tag tag--project"><b>Project</b> Cardiovascular risk prediction</span>
+          <p>Developed machine learning models for cardiovascular disease and heart attack prediction on healthcare datasets.</p>
+          <ul>
+            <li>Built data preprocessing pipelines for cleaning and preparing clinical data.</li>
+            <li>Reached 98% accuracy with a Random Forest model.</li>
+            <li>Worked in an agile research team to support early risk assessment.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Data Preprocessing</span></div>
+        </div>
+      </article>
+
+      <article class="xp__item reveal">
+        <div class="xp__meta">
+          <span class="xp__date"><i data-lucide="users"></i>Leadership</span>
+          <h3>President</h3>
+          <p class="xp__org">IEEE EMBS Student Chapter, MIT ADT University</p>
+          <p class="xp__type">Student organisation · Pune</p>
+        </div>
+        <div class="xp__body">
+          <p>Lead the chapter's technical workshops, seminars, hackathons and healthcare-innovation initiatives.</p>
+          <ul>
+            <li>Coordinate with faculty, industry professionals and IEEE representatives.</li>
+            <li>Promote AI, IoT and medical technology across the student body.</li>
+            <li>Received the Best EMBS Chair Award.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <span class="label reveal">04 / Skills</span>
+    <h2 class="title reveal">My toolkit.</h2>
+    <p class="subtitle reveal">What I reach for when building products and experiments.</p>
+
+    <div class="skills">
+      <div class="skill reveal"><h3>Languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">CSS</span></div></div>
+      <div class="skill reveal"><h3>Frontend</h3><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Responsive UI</span><span class="tag">REST integration</span></div></div>
+      <div class="skill reveal"><h3>Backend</h3><div class="tags"><span class="tag">FastAPI</span><span class="tag">REST APIs</span><span class="tag">JWT Auth</span><span class="tag">RBAC</span><span class="tag">Automated testing</span></div></div>
+      <div class="skill reveal"><h3>Databases</h3><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Schema design</span><span class="tag">Query optimisation</span></div></div>
+      <div class="skill reveal"><h3>AI / ML</h3><div class="tags"><span class="tag">LLMs (Gemini)</span><span class="tag">RAG</span><span class="tag">Prompt engineering</span><span class="tag">Deep learning</span><span class="tag">CNNs</span><span class="tag">YOLO</span><span class="tag">OpenCV</span></div></div>
+      <div class="skill reveal"><h3>Tools &amp; workflow</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span><span class="tag">Agile</span><span class="tag">Data pipelines</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION + RECOGNITION ============ -->
+<section class="section" id="recognition">
+  <div class="container">
+    <span class="label reveal">05 / Education</span>
+    <h2 class="title reveal">Academic background.</h2>
+
+    <div class="edu">
+      <article class="edu__card edu__card--main reveal">
+        <div class="edu__icon"><i data-lucide="graduation-cap"></i></div>
+        <div>
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p class="muted">MIT School of Computing, MIT ADT University, Pune</p>
+        </div>
+        <div class="edu__side"><span class="mono">2023 – 2027</span><b>CGPA 8.64</b></div>
+      </article>
+      <article class="edu__card reveal">
+        <div><h3>Class XII, TSBIE</h3><p class="muted">FIITJEE Junior College, Hyderabad</p></div>
+        <div class="edu__side"><span class="mono">2023</span><b>70%</b></div>
+      </article>
+      <article class="edu__card reveal">
+        <div><h3>Class X</h3><p class="muted">FIITJEE World School, Hyderabad</p></div>
+        <div class="edu__side"><span class="mono">2021</span><b>CGPA 10</b></div>
+      </article>
+    </div>
+
+    <span class="label label--spaced reveal">06 / Recognition</span>
+    <h2 class="title reveal">Awards &amp; certifications.</h2>
+
+    <ol class="milestones">
+      <li class="reveal"><div><h3>Winner, MIT-ADT AI Grand Challenge 2026</h3><p>AI-based weed detection and targeted spraying (FasalAstra)</p></div><span class="when">2026</span></li>
+      <li class="reveal"><div><h3>Best EMBS Chair Award</h3><p>IEEE EMBS Student Chapter, MIT ADT University</p></div><span class="when">IEEE</span></li>
+      <li class="reveal"><div><h3>Neural Networks and Deep Learning</h3><p>DeepLearning.AI · Score 98.69 / 100</p></div><span class="when">Certification</span></li>
+      <li class="reveal"><div><h3>Advanced Docker: Data Persistence and Orchestration</h3><p>Packt · Score 96.20 / 100</p></div><span class="when">Certification</span></li>
+      <li class="reveal"><div><h3>Practical Machine Learning</h3><p>Johns Hopkins University · Score 94 / 100</p></div><span class="when">Certification</span></li>
+      <li class="reveal"><div><h3>Database Structures and Management with MySQL</h3><p>Meta · Score 90 / 100</p></div><span class="when">Certification</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <span class="label reveal">07 / Contact</span>
+    <h2 class="title reveal">Let's work together.</h2>
+    <p class="subtitle reveal">Hiring for a web development role, or want to talk about a project? My inbox is open.</p>
+
+    <div class="contact reveal">
+      <div>
+        <p class="contact__k">Email</p>
+        <p class="contact__hint">The quickest way to reach me.</p>
+        <div class="email">
+          <a href="mailto:sujalj9146@gmail.com" class="email__addr"><i data-lucide="mail"></i>sujalj9146@gmail.com</a>
+          <button class="btn btn--small" id="copyEmail" type="button"><i data-lucide="copy"></i><span>Copy</span></button>
+        </div>
+      </div>
+      <div>
+        <p class="contact__k">Profiles</p>
+        <p class="contact__hint">Code, projects and updates.</p>
+        <div class="profiles">
+          <a href="https://github.com/Sujalj9146" target="_blank" rel="noopener"><span><i data-lucide="github"></i>GitHub</span><i data-lucide="arrow-up-right"></i></a>
+          <a href="https://www.linkedin.com/in/sujal-jadhavar-671689287/" target="_blank" rel="noopener"><span><i data-lucide="linkedin"></i>LinkedIn</span><i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row">
+    <div><b>Sujal Suresh Jadhavar</b><p>© <span id="year">2026</span> All rights reserved.</p></div>
+    <p class="footer__mid">Designed and built from scratch with HTML, CSS &amp; JavaScript.</p>
+    <div class="footer__icons">
+      <a href="https://github.com/Sujalj9146" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="https://www.linkedin.com/in/sujal-jadhavar-671689287/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      <a href="mailto:sujalj9146@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Project details dialog -->
+<dialog class="modal" id="modal" aria-labelledby="modalTitle">
+  <div class="modal__inner" id="modalBody"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
