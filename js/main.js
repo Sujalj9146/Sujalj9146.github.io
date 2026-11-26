@@ -325,12 +325,60 @@
   });
 
   /* -------------------------------------------------------------------
-     Show the résumé button only if resume.pdf exists
+     Polish: cursor spotlight, reading progress, stat count-up
      ------------------------------------------------------------------- */
-  if (location.protocol.indexOf('http') === 0) {
-    fetch('resume.pdf', { method: 'HEAD' }).then(function (r) {
-      if (r.ok) document.getElementById('resumeBtn').hidden = false;
-    }).catch(function () {});
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.addEventListener('pointermove', function (e) {
+    var el = e.target.closest && e.target.closest('.card, .stat, .edu__card');
+    if (!el) return;
+    var r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }, { passive: true });
+
+  var bar = document.createElement('div');
+  bar.className = 'progress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  var ticking = false;
+  function updateProgress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.setProperty('--progress', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(updateProgress); }
+  }, { passive: true });
+  updateProgress();
+
+  // Count numeric stats up from zero the first time they scroll into view.
+  var statNums = document.querySelectorAll('.stat b');
+  function countUp(el) {
+    var text = el.textContent.trim();
+    var m = text.match(/^(\d+(?:\.\d+)?)(.*)$/);
+    if (!m || reduceMotion) return;
+    var target = parseFloat(m[1]);
+    var decimals = (m[1].split('.')[1] || '').length;
+    var suffix = m[2];
+    var start = null;
+    var duration = 1100;
+    function frame(t) {
+      if (start === null) start = t;
+      var p = Math.min((t - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(frame); else el.textContent = text;
+    }
+    requestAnimationFrame(frame);
+  }
+  if ('IntersectionObserver' in window) {
+    var statIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { countUp(en.target); statIO.unobserve(en.target); }
+      });
+    }, { threshold: 0.6 });
+    statNums.forEach(function (n) { statIO.observe(n); });
   }
 
   document.getElementById('year').textContent = new Date().getFullYear();

@@ -240,6 +240,23 @@ button { font: inherit; color: inherit; }
   transition: border-color .3s, transform .3s var(--ease), box-shadow .3s;
 }
 .card:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: var(--shadow); }
+
+/* cursor spotlight on cards and stats: --mx / --my are set from js */
+.card, .stat, .edu__card { position: relative; isolation: isolate; }
+.card::before, .stat::before, .edu__card::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--accent-soft), transparent 45%);
+  opacity: 0; transition: opacity .35s;
+}
+.card:hover::before, .stat:hover::before, .edu__card:hover::before { opacity: 1; }
+.card > *, .stat > *, .edu__card > * { position: relative; }
+
+/* thin reading-progress bar under the header */
+.progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 100%; z-index: 50; pointer-events: none;
+  background: var(--accent); transform-origin: 0 50%; transform: scaleX(var(--progress, 0));
+}
+.stat b { font-variant-numeric: tabular-nums; }
 .card__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 24px 0; }
 .card__title { display: flex; align-items: baseline; gap: 10px; font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
 .card__title small { font-family: var(--mono); font-size: 11px; color: var(--dim); font-weight: 500; }
