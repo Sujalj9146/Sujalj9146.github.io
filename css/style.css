@@ -443,3 +443,6 @@ button { font: inherit; color: inherit; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after { transition-duration: 0s !important; animation: none !important; }
 }
+
+/* shorten the hero badge on narrow phones */
+@media (max-width: 480px) { .hide-xs { display: none; } }
